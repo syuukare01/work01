@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery動作チェック</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQueryライブラリの読み込み-->
+
+<script type="text/javascript">
+$(function(){
+  $('.box p').addClass('move');
+  $(window).scroll(function(){
+    $(".box").each(function(){
+      var imgPos = $(this).offset().top;    
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).find("p").removeClass('move');
+      } else {
+        $(this).find("p").addClass('move');
+      }
+    });
+  });
+});</script>
+
+
+<style>
+
+.box p {
+  -webkit-transition: all 1s;
+  -webkit-transform: translate(0, 0);
+  opacity: 1;
+}
+.box p.move {
+  -webkit-transform: translate(-10px, 0);
+  opacity: 0;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+
+
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+<h1 class="aka" style="color: green;">見出しh1</h1>
+
+
+<div class="box">
+  <p>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+  </p>
+</div>
+
+
+
+<div class="box">
+  <p>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+  </p>
+</div>
+
+
+<div>
+  <p>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+  </p>
+</div>
+
+<div class="box">
+  <p>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+  </p>
+</div>
+
+
+
+<div>
+  <p>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+    文章が左から出てきまーす。<br>
+  </p>
+</div>
+
+</body>
+</html>
